@@ -1,9 +1,9 @@
-import { useState } from 'react'
 import './App.css'
 import Navbar from './components/NavBar'
-import Home from './pages/Home';
+import TopStories from './pages/TopStories';
 import Favorites from './pages/Favorites';
 import Search from './pages/Search';
+import NotFound from './pages/NotFound';
 import {
   Routes,
   Route,
@@ -14,9 +14,10 @@ const  App = () => {
     <>
        <Navbar />
        <Routes>
-        <Route path= "/" element={<Home />}/>
-        <Route path= "/" element={<Search />}/>
-        <Route path= "/" element={<Favorites />}/>
+        <Route path= "/" element={<TopStories />}/>
+        <Route path= "/search" element={<Search />}/>
+        <Route path= "/favorites" element={<Favorites />}/>
+        <Route path= "*" element={<NotFound />}/>
        </Routes>
     </>
   )

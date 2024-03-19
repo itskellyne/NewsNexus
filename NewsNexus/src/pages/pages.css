@@ -1,0 +1,9 @@
+.page-header {
+    text-align: center;
+    font-style: oblique;
+}
+
+.search{
+    display:flex;
+    justify-content:center;
+}

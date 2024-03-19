@@ -1,0 +1,79 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #333; Example background color */
+    /* color: white; Example text color */
+    padding: 10px 20px; /* Example padding */
+  }
+  
+  .navbar-title {
+    margin: 0; 
+    font-size:x-large;
+    font-style: oblique;
+  }
+  
+  .pages {
+    display: flex;
+  }
+  
+  .link {
+    font-style: oblique;
+    font-size:large;
+    margin-left: 20px; /* Adjust as needed */
+    color: rgb(3, 3, 3); /* Example text color */
+    text-decoration: none; /* Remove default underline */
+    justify-content: space-between;
+  }
+
+  .ui-centered-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px; /* Gap between cards */
+    
+
+  }
+  .news-card {
+    border: 1px solid #ccc; /* Outline border */
+    padding: 10px; /* Adjust padding */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Distribute space evenly between children */
+  }
+
+  
+  .img {
+    width: 100%; /* Ensure the image container takes full width */
+    height: 350px; /* Adjust the height of the image container */
+    overflow: hidden; /* Hide any overflow content */
+  }
+  
+  .img img {
+    width: 100%; /* Make sure the image takes full width of its container */
+    height: 100%; /* Make sure the image takes full height of its container */
+    object-fit: cover; /* Resize the image to cover its container while preserving its aspect ratio */
+  }
+  
+  .content {
+    text-align: center; /* Center align content */
+  }
+  
+  .title {
+    font-weight: bold; /* Make title bold */
+    margin-bottom: 10px; /* Add some space below the title */
+  }
+  
+  .btn {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Hover background color */
+  }
