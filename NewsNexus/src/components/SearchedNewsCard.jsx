@@ -36,7 +36,7 @@ const SearchedNewsCard = ({searchedarticle}) => {
         <div className="content">
           <p className="title">{searchedarticle.snippet}</p>
           <button className="button">
-            <a href={searchedarticle.web_url}>Visit article</a>
+            <a className= "linktext" href={searchedarticle.web_url}>Visit article</a>
           </button>
         </div>
       </div>

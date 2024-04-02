@@ -14,10 +14,10 @@ function ArticleSearch({searchedArticles, setSearchedArticles}) {
         if(error) console.log(error)
     }
     return (
-        <form>
-            <label htmlFor="searchInput">Search for an article: </label>
-            <input type="text" onChange = {(e) => setInputValue(e.target.value)} className="form-control" id="searchInput" />
-            <button onClick = {handleClick} type ="submit" className="btn btn-success">Search</button>
+        <form className="form">
+            <input className="item" type="text" placeholder="Search for an article" onChange={(e) => setInputValue(e.target.value)} autoComplete="off"/>
+            <br />
+            <button className="button" onClick={handleClick} type="submit">Search</button>
         </form>
     )
 }

@@ -1,22 +1,30 @@
 import './components.css'
-
+import { useState } from 'react';
 const NewsCard = ({article}) => {
-    // const handleFavorite = () => {
-    //   // const set = new Set(JSON.parse(localStorage.getItem('favorites')))
-    //   const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    //   favorites.push(article);
-    //   localStorage.setItem('favorites', JSON.stringify(favorites));
-    // };
-  // console.log(article.multimedia[0].url);
+
   const handleFavorite = () => {
-    // Add article to local storage
-    let favorites = JSON.parse(localStorage.getItem('favorites'));
-    // If favorites is null or undefined, initialize it as an empty array
-    if (!Array.isArray(favorites)) {
-      favorites = [];
+    // // Add article to local storage
+
+    let favorites = [];
+    const storedFavorites = localStorage.getItem('favorites');
+    
+    try {
+      if (storedFavorites) {
+        favorites = JSON.parse(storedFavorites);
+      }
+      const favoritesSet = new Set(favorites.map(fav => fav.title));
+
+      if (!favoritesSet.has(article.title)) {
+        favorites.push(article);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+      } else {
+        console.log('Article already exists in favorites.');
+      }
+    } catch (error) {
+      console.error('Error parsing or processing favorites from local storage:', error);
+      // Handle the error gracefully, e.g., log the error and don't modify favorites
     }
-    favorites.push(article);
-    localStorage.setItem('favorites', JSON.stringify(favorites));
+
   };
   
     return (
@@ -28,9 +36,9 @@ const NewsCard = ({article}) => {
         <div className="content">
           <p className="title">{article.title}</p>
           <button className="button">
-            <a href={article.url}>Visit article</a>
+            <a className="linktext" href={article.url}>Visit article</a>
           </button>
-          <button onClick={handleFavorite}> Favorite </button>
+          <button className="button" onClick={handleFavorite}> Favorite </button>
         </div>
       </div>
       </>

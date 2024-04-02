@@ -11,6 +11,9 @@
     margin: 0; 
     font-size:x-large;
     font-style: oblique;
+    text-shadow: 2px 1px #ffdff5;
+    background-color: #ffdff5;
+    border-radius: 50%;
   }
   
   .pages {
@@ -26,6 +29,12 @@
     justify-content: space-between;
   }
 
+  .link:hover {
+    background-color: #ffdff5; /* Hover background color */
+    border-radius: 50%;
+    width: max-content;
+  }
+
   .ui-centered-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three equal columns */
@@ -34,7 +43,8 @@
 
   }
   .news-card {
-    border: 1px solid #ccc; /* Outline border */
+    border: 2px solid #0c0c0c; /* Outline border */
+    box-shadow: 3px 3px #ffdff5;
     padding: 10px; /* Adjust padding */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack children vertically */
@@ -59,21 +69,37 @@
   }
   
   .title {
-    font-weight: bold; /* Make title bold */
-    margin-bottom: 10px; /* Add some space below the title */
+    font-weight: bold; /*Make title bold*/
+    margin-bottom: 10px; 
   }
-  
-  .btn {
-    background-color: #007bff; /* Button background color */
-    color: #fff; /* Button text color */
-    border: none;
+  .linktext {
+    text-decoration: none;
+    color: #070707;
+  }
+  .button {
+    background-color: none; /* Button background color */
+    color: #070707; /* Button text color */
+    font-weight: 500;
+    border: 1px solid #090808;
     padding: 10px 20px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-right: 5px;
   }
-  
-  .btn:hover {
-    background-color: #0056b3; /* Hover background color */
+
+  .button:hover {
+    background-color: #ffdff5; /* Hover background color */
   }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  .item {
+    padding-bottom: 15px;
+  }
+
+ 

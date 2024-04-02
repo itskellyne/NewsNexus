@@ -9,11 +9,19 @@ const Search = () => {
 
     return(
         <div>
-            <h1 className="page-header">Search</h1>
-            <br />
+            <div className="opener">
+                <div className="openline">
+                    <h3 className="smallertext">Already have something in mind?</h3> 
+                    <span className="top-header">Search</span>
+                    <h3 className="smallertext">through </h3>
+                    <span className="slant"> NewYorkTimes </span>
+                    <h3 className="smallertext">articles:</h3>
+                </div>
+            </div>
             <div className="search">
             <ArticleSearch inputValue = {inputValue} setSearchedArticles = {setSearchedArticles} />
             </div>
+            <br />
             <SearchedList searchedarticles = {searchedarticles}/>
         </div>
     )
