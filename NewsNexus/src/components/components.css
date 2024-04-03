@@ -100,6 +100,10 @@
   }
   .item {
     padding-bottom: 15px;
+    outline-color: black;
+  }
+  .item:focus {
+    box-shadow: 4px 4px #ffdff5;
   }
 
  

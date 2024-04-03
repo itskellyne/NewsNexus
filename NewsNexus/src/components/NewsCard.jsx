@@ -36,9 +36,9 @@ const NewsCard = ({article}) => {
         <div className="content">
           <p className="title">{article.title}</p>
           <button className="button">
-            <a className="linktext" href={article.url}>Visit article</a>
+            <a className="linktext" href={article.url} target="_blank">Visit article</a>
           </button>
-          <button className="button" onClick={handleFavorite}> Favorite </button>
+          <button className="button" onClick={handleFavorite} > Favorite </button>
         </div>
       </div>
       </>
